@@ -18,7 +18,6 @@ public class Login extends AppCompatActivity {
         EditText username = (EditText) findViewById(R.id.loginUsernameInput);
         EditText password = (EditText) findViewById(R.id.loginPasswordInput);
         if (username.getText().toString().equals("mate")) {
-            System.out.println("HI");
             Intent intent = new Intent(this, HomeMate.class);
             startActivity(intent);
         } else if (username.getText().toString().equals("check")) {
