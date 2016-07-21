@@ -9,6 +9,12 @@ public class User {
     private String username;
     private String password;
 
+    public User() {
+        name = "temp";
+        username = "temp";
+        password = "temp";
+    }
+
     public User(String name, String username, String password) {
         this.name = name;
         this.username = username;
@@ -37,5 +43,17 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public int hashCode() {
+        return username.hashCode();
+    }
+
+    public String toString() {
+        return name + " " + username + " " + password;
+    }
+
+    public boolean equals(User u) {
+        return username.equals(u.username);
     }
 }
