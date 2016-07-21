@@ -21,5 +21,10 @@ public class Settings extends AppCompatActivity {
 
     }
 
+    public void onHomeButtonPressed(View v) {
+        Intent intent = new Intent(this, Home.class);
+        startActivity(intent);
+    }
+
 
 }

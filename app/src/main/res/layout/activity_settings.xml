@@ -90,4 +90,13 @@
         android:layout_alignStart="@+id/addFriendButton"
         android:onClick="onChangeFrequencyPressed" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:id="@+id/settingstohome"
+        android:layout_alignTop="@+id/friendEmail"
+        android:layout_alignStart="@+id/addFriendButton"
+        android:onClick="onHomeButtonPressed" />
+
 </RelativeLayout>

@@ -17,4 +17,12 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
+
+    public void onOKButtonPressed(View v) {
+        //TODO
+    }
+
+    public void onNotOKButtonPressed(View v) {
+        //TODO
+    }
 }

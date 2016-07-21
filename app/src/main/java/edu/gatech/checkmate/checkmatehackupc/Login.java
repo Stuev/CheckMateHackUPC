@@ -17,7 +17,7 @@ public class Login extends AppCompatActivity {
     public void onLoginButtonPressed(View v) {
         EditText username = (EditText) findViewById(R.id.loginUsernameInput);
         EditText password = (EditText) findViewById(R.id.loginPasswordInput);
-        Intent intent = new Intent(this, Signup.class);
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 
