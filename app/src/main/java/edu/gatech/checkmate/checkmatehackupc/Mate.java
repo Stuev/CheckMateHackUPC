@@ -19,11 +19,6 @@ public class Mate extends User{
         friends = new HashMap<String, Check>();
     }
 
-    public void addFriend(Check friend) {
-        friends.put(friend.getUsername(), friend);
-
-
-    }
 
     public void dropFriend(String username){
         friends.remove(username);

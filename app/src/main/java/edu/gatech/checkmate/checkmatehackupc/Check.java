@@ -57,10 +57,6 @@ public class Check extends User {
         this.isDisabled = isDisabled;
     }
 
-    public void addFriend(Mate friend) {
-        friends.put(friend.getUsername(), friend);
-    }
-
     public void dropFriend(String username) {
         friends.remove(username);
     }
