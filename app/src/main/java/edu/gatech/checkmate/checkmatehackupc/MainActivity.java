@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         HashMap<String, Mate> h = new HashMap<>();
         h.put("Mate test", m);
         user = new Check(d, 100, false, h);
+        TimeManager alarm = new TimeManager();
+        alarm.SetAlarm(this);
     }
 
     public void onLoginButtonPressed(View v) {

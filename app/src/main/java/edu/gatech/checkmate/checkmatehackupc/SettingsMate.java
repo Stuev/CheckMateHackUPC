@@ -14,7 +14,7 @@ public class SettingsMate extends AppCompatActivity {
     }
 
     public void onSettingsButtonPressed(View v) {
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(this, HomeMate.class);
         startActivity(intent);
     }
 

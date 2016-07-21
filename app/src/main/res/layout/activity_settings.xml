@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Frequency:"
+        android:text="Frequency (hours):"
         android:id="@+id/frequency"
         android:layout_below="@+id/newFriendName"
         android:layout_alignParentStart="true" />
