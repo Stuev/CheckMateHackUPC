@@ -1,7 +1,9 @@
 package edu.gatech.checkmate.checkmatehackupc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class Signup extends AppCompatActivity {
 
@@ -9,5 +11,11 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+    }
+
+
+    public void onSignupPressed(View v) {
+        Intent intent = new Intent(this, Signup.class);
+        startActivity(intent);
     }
 }
