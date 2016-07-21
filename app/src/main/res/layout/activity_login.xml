@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Welcome to CheckMate!"
+        android:textSize="48sp"
+        android:gravity="center"
         android:id="@+id/welcomeText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
