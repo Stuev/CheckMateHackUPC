@@ -18,5 +18,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onSignupButtonPressed(View v) {
+        Intent intent = new Intent(this, Signup.class);
+        startActivity(intent);
+    }
+
 
 }
