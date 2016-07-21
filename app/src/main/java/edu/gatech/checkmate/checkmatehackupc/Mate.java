@@ -16,6 +16,11 @@ public class Mate extends User{
         friends = new HashMap<String, Check>();
     }
 
+    public Mate(String name, String username, String password) {
+        super(name, username, password);
+        friends = new HashMap<String, Check>();
+    }
+
     public void addFriend(Check friend) throws IllegalArgumentException {
         if(friends.put(friend.getUsername(), friend) == null) {
             throw new IllegalArgumentException("Friend already added.");
@@ -29,11 +34,11 @@ public class Mate extends User{
         }
     }
 
-    public boolean isFriendOk(String username) throws IllegalArgumentException {
+/*    public boolean isFriendOk(String username) throws IllegalArgumentException {
         Check friend = friends.get(username);
         if (friend == null) {
             throw new IllegalArgumentException("Friend does not exist");
         }
-        return friend.getNextCheckIn().after(new Date());
-    }
+        return friend
+    }*/
 }

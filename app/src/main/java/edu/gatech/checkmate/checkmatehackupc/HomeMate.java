@@ -20,8 +20,10 @@ public class HomeMate extends AppCompatActivity {
         ListView lv = (ListView) findViewById(R.id.checkList);
 
         List<String> your_array_list = new ArrayList<String>();
-        your_array_list.add("foo");
-        your_array_list.add("bar");
+        for (User u : Login.loggedIn.getFriends().values()) {
+            your_array_list.add(u.getUsername());
+        }
+
 
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
