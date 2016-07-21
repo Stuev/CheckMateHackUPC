@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CheckMateHackUPC</string>
+    <string name="welcome_to_checkmate">Welcome to CheckMate!</string>
 </resources>
