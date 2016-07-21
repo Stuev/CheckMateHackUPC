@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.gatech.checkmate.checkmatehackupc">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:process=":remote" android:name=".TimeManager"></receiver>
         <activity android:name=".Login" />
         <activity android:name=".Signup" />
         <activity android:name=".Home" />
@@ -22,6 +26,8 @@
         <activity android:name=".HomeMate" />
         <activity android:name=".SettingsMate" />
         <activity android:name=".Tutorial"></activity>
+
     </application>
+
 
 </manifest>

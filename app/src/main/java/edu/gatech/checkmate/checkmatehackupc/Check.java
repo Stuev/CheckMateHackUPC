@@ -14,7 +14,7 @@ public class Check extends User {
     private HashMap<String, Mate> friends;
 
     public Check(Date nextCheckIn, int delay, boolean isDisabled, HashMap<String, Mate> friends) {
-        super("Check", "Check", "password");
+        super();
         this.nextCheckIn = nextCheckIn;
         this.delay = delay;
         this.isDisabled = isDisabled;

@@ -19,6 +19,7 @@ public class Settings extends AppCompatActivity {
         String fd = f.getText().toString();
         int x = Integer.parseInt(fd);
         MainActivity.user.setDelay(x);
+        TimeManager.delay = x*1000*60;
     }
 
     public void onAddFriendPressed(View v) {

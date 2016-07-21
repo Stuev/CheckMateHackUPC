@@ -111,7 +111,7 @@ public class Database extends SQLiteOpenHelper{
         String val;
         if(!c.isBeforeFirst()){
             current = valueOf(c.getString(c.getColumnIndex(COLUMN_CHECKIN)));
-            newVal = current + check.getDelay();
+            newVal = current + (check.getDelay() * 3600 * 1000);
             ContentValues values = new ContentValues();
             values.put(COLUMN_CHECKIN, newVal + "");
             db.update(TABLE_USERS, values, COLUMN_USERNAME + "= '" + check.getUsername() + "';", null);
