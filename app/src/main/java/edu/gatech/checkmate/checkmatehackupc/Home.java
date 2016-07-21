@@ -20,6 +20,7 @@ public class Home extends AppCompatActivity {
 
     public void onOKButtonPressed(View v) {
         MainActivity.user.setIsDisabled(false);
+        TimeManager.hasCheckedIn = true;
     }
 
     public void onNotOKButtonPressed(View v) {
