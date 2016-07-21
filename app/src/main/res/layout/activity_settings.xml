@@ -25,7 +25,8 @@
         android:id="@+id/addFriendButton"
         android:layout_marginTop="96dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="onAddFriendPressed" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -79,5 +80,14 @@
         android:id="@+id/frequencyInput"
         android:layout_below="@+id/frequency"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Frequency"
+        android:id="@+id/changeFrequencyButton"
+        android:layout_alignTop="@+id/frequencyInput"
+        android:layout_alignStart="@+id/addFriendButton"
+        android:onClick="onChangeFrequencyPressed" />
 
 </RelativeLayout>
