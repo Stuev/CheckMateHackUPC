@@ -23,13 +23,13 @@ public class Mate extends User{
 
     }
 
-    public void dropFriend(String username) {
+    public void dropFriend(String username) throws IllegalArgumentException {
         if (friends.remove(username) == null) {
             throw new IllegalArgumentException("Friend does not exist");
         }
     }
 
-    public boolean isFriendOk(String username) {
+    public boolean isFriendOk(String username) throws IllegalArgumentException {
         Check friend = friends.get(username);
         if (friend == null) {
             throw new IllegalArgumentException("Friend does not exist");
