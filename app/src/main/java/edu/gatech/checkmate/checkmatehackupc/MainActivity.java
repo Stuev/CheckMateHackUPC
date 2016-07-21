@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         HashMap<String, Mate> h = new HashMap<>();
         h.put("Mate test", m);
         check = new Check(d, 100, false, h);
+        check.addFriend(m);
+        m.addFriend(check);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
     }
