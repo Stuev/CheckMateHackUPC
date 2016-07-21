@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Date d = new Date(2016, 9, 16);
-        Mate m = new Mate("mate", "mate", "mate");
+        m = new Mate("mate", "mate", "mate");
         HashMap<String, Mate> h = new HashMap<>();
         h.put("Mate test", m);
         check = new Check(d, 100, false, h);
