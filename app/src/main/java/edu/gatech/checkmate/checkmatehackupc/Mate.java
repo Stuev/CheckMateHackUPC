@@ -2,7 +2,6 @@ package edu.gatech.checkmate.checkmatehackupc;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.IllegalFormatCodePointException;
 import java.util.Map;
 
 /**
