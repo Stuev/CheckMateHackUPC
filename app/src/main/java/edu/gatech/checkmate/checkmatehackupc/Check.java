@@ -13,6 +13,13 @@ public class Check extends User {
     private boolean isDisabled;
     private HashMap<String, Mate> friends;
 
+    public Check(String name, String username, String password) {
+        super(name, username, password);
+        nextCheckIn = new Date(new Date().getTime() + 60000);
+        delay = 2;
+        isDisabled = false;
+        friends = new HashMap<>();
+    }
     public Check(Date nextCheckIn, int delay, boolean isDisabled, HashMap<String, Mate> friends) {
         super();
         this.nextCheckIn = nextCheckIn;
@@ -51,5 +58,18 @@ public class Check extends User {
 
     public void setIsDisabled(boolean isDisabled) {
         this.isDisabled = isDisabled;
+    }
+
+    public void addFriend(Mate friend) throws IllegalArgumentException {
+        if(friends.put(friend.getUsername(), friend) == null) {
+            throw new IllegalArgumentException("Friend already added.");
+        }
+
+    }
+
+    public void dropFriend(String username) throws IllegalArgumentException {
+        if (friends.remove(username) == null) {
+            throw new IllegalArgumentException("Friend does not exist");
+        }
     }
 }

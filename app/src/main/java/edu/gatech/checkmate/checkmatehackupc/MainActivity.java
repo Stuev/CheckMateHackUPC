@@ -10,17 +10,19 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static Check user;
+    public static Check check;
+    public static Mate m;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Date d = new Date(2016, 9, 16);
-        Mate m = new Mate();
+        Mate m = new Mate("mate", "mate", "mate");
         HashMap<String, Mate> h = new HashMap<>();
         h.put("Mate test", m);
-        user = new Check(d, 100, false, h);
+        check = new Check(d, 100, false, h);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
     }

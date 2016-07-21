@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
 
+    public static User loggedIn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +20,11 @@ public class Login extends AppCompatActivity {
         EditText username = (EditText) findViewById(R.id.loginUsernameInput);
         EditText password = (EditText) findViewById(R.id.loginPasswordInput);
         if (username.getText().toString().equals("mate")) {
+            loggedIn = MainActivity.m;
             Intent intent = new Intent(this, HomeMate.class);
             startActivity(intent);
         } else if (username.getText().toString().equals("check")) {
+            loggedIn = MainActivity.check;
             Intent intent = new Intent(this, Home.class);
             startActivity(intent);
         }
