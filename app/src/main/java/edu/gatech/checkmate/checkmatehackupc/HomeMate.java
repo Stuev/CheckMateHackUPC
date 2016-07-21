@@ -24,11 +24,13 @@ public class HomeMate extends AppCompatActivity {
 
         Database d = new Database(this);
         for (User u : Login.loggedIn.getFriends().values()) {
+            String isOK = "";
             try {
-                your_array_list.add(u.getUsername() + ": " + d.isGood((Check) u));
+                 isOK =  ": " + d.isGood((Check) u);
             } catch (Exception e) {
                 Log.d("HomeMate", "OOPS");
             }
+            your_array_list.add(u.getUsername() + isOK);
         }
 
 
