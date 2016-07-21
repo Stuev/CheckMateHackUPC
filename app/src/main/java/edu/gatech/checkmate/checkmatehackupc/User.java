@@ -3,6 +3,7 @@ package edu.gatech.checkmate.checkmatehackupc;
 import java.util.HashMap;
 
 /**
+ *
  * Created by Courtney on 7/21/16.
  */
 public class User {
@@ -24,6 +25,7 @@ public class User {
         this.name = name;
         this.username = username;
         this.password = password;
+        this.friends = new HashMap<>();
     }
 
     public void setName(String name) {
