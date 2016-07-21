@@ -23,6 +23,7 @@ public class HomeMate extends AppCompatActivity {
         List<String> your_array_list = new ArrayList<String>();
 
         Database d = new Database(this);
+        //System.out.println(Login.loggedIn.toString());
         for (User u : Login.loggedIn.getFriends().values()) {
             String isOK = "";
             try {

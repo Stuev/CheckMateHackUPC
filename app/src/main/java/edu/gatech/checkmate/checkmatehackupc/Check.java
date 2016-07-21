@@ -57,16 +57,11 @@ public class Check extends User {
         this.isDisabled = isDisabled;
     }
 
-    public void addFriend(Mate friend) throws IllegalArgumentException {
-        if(friends.put(friend.getUsername(), friend) == null) {
-            throw new IllegalArgumentException("Friend already added.");
-        }
-
+    public void addFriend(Mate friend) {
+        friends.put(friend.getUsername(), friend);
     }
 
-    public void dropFriend(String username) throws IllegalArgumentException {
-        if (friends.remove(username) == null) {
-            throw new IllegalArgumentException("Friend does not exist");
-        }
+    public void dropFriend(String username) {
+        friends.remove(username);
     }
 }
