@@ -24,7 +24,8 @@
         android:text="OK"
         android:id="@+id/okButton"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onOKButtonPressed" />
 
     <Button
         android:layout_width="wrap_content"
@@ -32,5 +33,6 @@
         android:text="NOT OK"
         android:id="@+id/notOkButton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onNotOKButtonPressed" />
 </RelativeLayout>

@@ -90,4 +90,31 @@
         android:layout_alignStart="@+id/addFriendButton"
         android:onClick="onChangeFrequencyPressed" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:id="@+id/settingstohome"
+        android:layout_alignTop="@+id/friendEmail"
+        android:layout_alignStart="@+id/addFriendButton"
+        android:onClick="onHomeButtonPressed" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mateList"
+        android:layout_below="@+id/changeFrequencyButton"
+        android:layout_marginTop="62dp"
+        android:layout_above="@+id/disableButton"
+        android:layout_alignEnd="@+id/settingstohome" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Current Friends:"
+        android:id="@+id/currentFriends"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

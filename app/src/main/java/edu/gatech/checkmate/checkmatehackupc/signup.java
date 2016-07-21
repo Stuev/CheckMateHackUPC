@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class Signup extends AppCompatActivity {
 
@@ -15,7 +16,11 @@ public class Signup extends AppCompatActivity {
 
 
     public void onSignupPressed(View v) {
-        Intent intent = new Intent(this, Signup.class);
+        EditText name = (EditText) findViewById(R.id.signupNameInput);
+        EditText email = (EditText) findViewById(R.id.signupUsernameInput);
+        EditText password = (EditText) findViewById(R.id.signupPasswordInput);
+        //TODO get checkbox info
+        Intent intent = new Intent(this, Home.class);
         startActivity(intent);
     }
 }

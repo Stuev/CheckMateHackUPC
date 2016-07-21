@@ -17,4 +17,12 @@ public class Home extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
+
+    public void onOKButtonPressed(View v) {
+        MainActivity.user.setIsDisabled(false);
+    }
+
+    public void onNotOKButtonPressed(View v) {
+        MainActivity.user.setIsDisabled(true);
+    }
 }
