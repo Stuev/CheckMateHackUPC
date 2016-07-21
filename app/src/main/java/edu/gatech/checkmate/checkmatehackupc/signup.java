@@ -3,7 +3,7 @@ package edu.gatech.checkmate.checkmatehackupc;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class signup extends AppCompatActivity {
+public class Signup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

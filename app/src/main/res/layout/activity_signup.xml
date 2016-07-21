@@ -53,8 +53,26 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_in"
-        android:id="@+id/loginButton"
+        android:text="@string/sign_up"
+        android:id="@+id/signUpButton"
         android:layout_below="@+id/passwordInput"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameInput"
+        android:layout_below="@+id/name"
+        android:layout_alignEnd="@+id/usernameInput"
+        android:layout_alignStart="@+id/usernameInput" />
+
 </RelativeLayout>
