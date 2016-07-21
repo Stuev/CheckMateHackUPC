@@ -20,7 +20,8 @@
         <activity android:name=".Home" />
         <activity android:name=".Settings" />
         <activity android:name=".HomeMate" />
-        <activity android:name=".SettingsMate"></activity>
+        <activity android:name=".SettingsMate" />
+        <activity android:name=".Tutorial"></activity>
     </application>
 
 </manifest>

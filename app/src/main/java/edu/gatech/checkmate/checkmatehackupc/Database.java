@@ -97,11 +97,10 @@ public class Database extends SQLiteOpenHelper{
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_USERNAME + " = '" + check.getUsername() + "';", null);
         c.moveToFirst();
-        if (new Date().getTime() > check.getNextCheckIn().getTime()) {
-            return false;
-        }
-        return true;
-    }atabase 
+        String isDisabled = c.getString(c.getColumnIndex(COLUMN_ISDISABLED));
+        if (new Date().getTime() <= check.getNextCheckIn().getTime()) return true;
+        else return false;
+    }
 
     public void updateNextCheckIn(Check check) {
         SQLiteDatabase db = getWritableDatabase();
