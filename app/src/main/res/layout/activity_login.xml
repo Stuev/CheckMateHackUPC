@@ -10,5 +10,22 @@
     tools:context="edu.gatech.checkmate.checkmatehackupc.Login">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/username"
+        android:id="@+id/username"
+        android:layout_marginTop="93dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/password" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/password"
+        android:id="@+id/password"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
