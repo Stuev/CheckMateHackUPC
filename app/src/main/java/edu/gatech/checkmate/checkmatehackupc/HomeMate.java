@@ -3,6 +3,7 @@ package edu.gatech.checkmate.checkmatehackupc;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -20,8 +21,16 @@ public class HomeMate extends AppCompatActivity {
         ListView lv = (ListView) findViewById(R.id.checkList);
 
         List<String> your_array_list = new ArrayList<String>();
+
+        Database d = new Database(this);
         for (User u : Login.loggedIn.getFriends().values()) {
-            your_array_list.add(u.getUsername());
+            String isOK = "";
+            try {
+                 isOK =  ": " + d.isGood((Check) u);
+            } catch (Exception e) {
+                Log.d("HomeMate", "OOPS");
+            }
+            your_array_list.add(u.getUsername() + isOK);
         }
 
 
