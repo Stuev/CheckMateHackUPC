@@ -56,7 +56,8 @@
         android:text="@string/sign_up"
         android:id="@+id/signUpButton"
         android:layout_below="@+id/passwordInput"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onSignupPressed" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,7 +71,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nameInput"
+        android:id="@+id/editText"
         android:layout_below="@+id/name"
         android:layout_alignEnd="@+id/usernameInput"
         android:layout_alignStart="@+id/usernameInput" />
