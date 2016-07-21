@@ -1,6 +1,7 @@
 package edu.gatech.checkmate.checkmatehackupc;
 
 import java.util.Date;
+import java.util.HashMap;
 
 /**
  * Created by Courtney on 7/21/16.
@@ -12,7 +13,7 @@ public class Check extends User {
     private boolean isDisabled;
     private HashMap<String, Mate> friends;
 
-    public Check(Date nextCheckIn, int delay, boolean isDisabled, HashMap<Check, Mate> friends) {
+    public Check(Date nextCheckIn, int delay, boolean isDisabled, HashMap<String, Mate> friends) {
         super("Check", "Check", "password");
         this.nextCheckIn = nextCheckIn;
         this.delay = delay;
@@ -28,11 +29,11 @@ public class Check extends User {
         this.nextCheckIn = nextCheckIn;
     }
 
-    public HashMap<Check, Mate> getFriends() {
+    public HashMap<String, Mate> getFriends() {
         return friends;
     }
 
-    public void setFriends(HashMap<Check, Mate> friends) {
+    public void setFriends(HashMap<String, Mate> friends) {
         this.friends = friends;
     }
 
