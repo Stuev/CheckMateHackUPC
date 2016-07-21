@@ -9,6 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.gatech.checkmate.checkmatehackupc.Login">
 
-    
+
 
 </RelativeLayout>
