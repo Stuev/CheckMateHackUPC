@@ -19,10 +19,10 @@ public class Home extends AppCompatActivity {
     }
 
     public void onOKButtonPressed(View v) {
-        //TODO
+        MainActivity.user.setIsDisabled(false);
     }
 
     public void onNotOKButtonPressed(View v) {
-        //TODO
+        MainActivity.user.setIsDisabled(true);
     }
 }
