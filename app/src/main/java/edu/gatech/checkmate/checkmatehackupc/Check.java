@@ -36,9 +36,6 @@ public class Check extends User {
         this.nextCheckIn = nextCheckIn;
     }
 
-    public HashMap<String, Mate> getFriends() {
-        return friends;
-    }
 
     public void setFriends(HashMap<String, Mate> friends) {
         this.friends = friends;

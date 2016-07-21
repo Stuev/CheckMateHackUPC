@@ -18,7 +18,8 @@ public class Settings extends AppCompatActivity {
         EditText f = (EditText) findViewById(R.id.frequencyInput);
         String fd = f.getText().toString();
         int x = Integer.parseInt(fd);
-        MainActivity.user.setDelay(x);
+        Check temp = (Check) Login.loggedIn;
+        temp.setDelay(x);
         TimeManager.delay = x*1000*60;
     }
 
