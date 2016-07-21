@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class Settings extends AppCompatActivity {
 
@@ -14,10 +15,13 @@ public class Settings extends AppCompatActivity {
     }
 
     public void onChangeFrequencyPressed(View v) {
-        //TODO change frequency
+        EditText f = (EditText) findViewById(R.id.frequencyInput);
+        String fd = f.getText().toString();
+        int x = Integer.parseInt(fd);
+        MainActivity.user.setDelay(x);
     }
+
     public void onAddFriendPressed(View v) {
-        //TODO change frequency
 
     }
 
