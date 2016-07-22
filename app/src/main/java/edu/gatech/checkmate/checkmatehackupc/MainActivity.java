@@ -8,11 +8,15 @@ import android.view.View;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
 
     public static Check check = new Check(new Date(2016, 9, 16), 100, false, new HashMap<String, Mate>());
     public static Mate m = new Mate("mate", "mate", "mate");
+    public static HashMap<String, Mate> mates = new HashMap<>();
+    public static  HashMap<String, Check> checks = new HashMap<>();
+    public static Mate mate2 = new Mate("mate2", "mate2", "mate2");
 
 
     @Override
@@ -25,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         //h.put("Mate test", m);
         check.addFriend(m);
         m.addFriend(check);
+        mates.put(m.getUsername(), m);
+        mates.put(mate2.getUsername(), mate2);
+        checks.put(check.getUsername(), check);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
 
@@ -44,5 +51,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public static Mate getMate(String username) {
+        return mates.get(username);
+    }
+
+    public static Check getCheck(String useername) {
+        return checks.get(useername);
+    }
 
 }

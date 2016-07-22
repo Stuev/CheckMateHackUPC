@@ -63,6 +63,9 @@ public class Settings extends AppCompatActivity {
         EditText username = (EditText) findViewById(R.id.newFriendUsername);
         String friendNameString = (String) friendName.getText().toString();
         String userNameString = (String) username.getText().toString();
+        Login.loggedIn.addFriend(MainActivity.getMate(userNameString));
+        finish();
+        startActivity(getIntent());
     }
 
     public void onHomeButtonPressed(View v) {
