@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         user = new Check(d, 100, false, h);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
+        CheckInManager cm = new CheckInManager();
+        cm.SetAlarm(this);
     }
 
     public void onLoginButtonPressed(View v) {
