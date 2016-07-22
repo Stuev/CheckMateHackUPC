@@ -17,8 +17,8 @@ import java.util.List;
 
 public class Settings extends AppCompatActivity {
 
-    ListView lv = (ListView) findViewById(R.id.mateList);
-    Database d = new Database(this);
+    ListView lv;
+    Database d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,8 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         addFriendsToList();
         System.out.println(Login.loggedIn);
+        lv = (ListView) findViewById(R.id.mateList);
+        d = new Database(this);
     }
 
     public void addFriendsToList() {
