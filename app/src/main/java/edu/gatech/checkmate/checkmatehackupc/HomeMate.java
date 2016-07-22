@@ -27,7 +27,8 @@ public class HomeMate extends AppCompatActivity {
         for (User u : Login.loggedIn.getFriends().values()) {
             String isOK = "";
             try {
-                 isOK =  ": " + d.isGood((Check) u);
+                isOK +=  ": ";
+                isOK +=( d.isGood((Check) u)) ? "OK" : "NOT OK";
             } catch (Exception e) {
                 Log.d("HomeMate", "OOPS");
             }

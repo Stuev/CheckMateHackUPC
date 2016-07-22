@@ -27,7 +27,7 @@ public class SettingsMate extends AppCompatActivity {
             String isOK = "";
             try {
                 isOK +=  ": ";
-                isOK +=( d.isGood((Check) u)) ? "is OK" : "is NOT OK";
+                isOK +=( d.isGood((Check) u)) ? "OK" : "NOT OK";
             } catch (Exception e) {
                 Log.d("HomeMate", "OOPS");
             }
