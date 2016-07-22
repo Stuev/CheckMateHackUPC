@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         check.addFriend(m);
         m.addFriend(check);
         mates.put(m.getUsername(), m);
+        mates.put(mate2.getUsername(), mate2);
         checks.put(check.getUsername(), check);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
