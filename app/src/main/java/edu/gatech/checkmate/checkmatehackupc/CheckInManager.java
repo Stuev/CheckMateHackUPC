@@ -58,11 +58,14 @@ public class CheckInManager extends BroadcastReceiver{
     }
     public void SetAlarm(Context context)
     {
+
+
+
         Log.d("CheckInManager", "Set alarm for check in");
         AlarmManager am1 =( AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(context, CheckInManager.class);
 
         PendingIntent pi = PendingIntent.getBroadcast(context, 1, i, 0);
-        am1.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), TimeManager.delay, pi);
+        am1.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), TimeManager.delay2, pi);
     }
 }

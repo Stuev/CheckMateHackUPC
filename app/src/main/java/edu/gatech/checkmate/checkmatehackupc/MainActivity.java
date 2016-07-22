@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         alarm.SetAlarm(this);
 
         Log.d("MainActivity", "About to call CheckInManager");
-        CheckInManager cm = new CheckInManager();
-        cm.SetAlarm(this);
+        //CheckInManager cm = new CheckInManager();
+        //cm.SetAlarm(this);
         Log.d("MainActivity", "End onCreate MainActivity");
     }
 
