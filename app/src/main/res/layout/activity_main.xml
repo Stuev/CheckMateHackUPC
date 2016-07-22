@@ -19,26 +19,30 @@
         android:textSize="48sp"
         android:gravity="center"
         android:id="@+id/welcomeText"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="117dp" />
+        android:layout_above="@+id/loginButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="63dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log_in"
+        android:textSize="40dp"
         android:id="@+id/loginButton"
-        android:layout_below="@+id/welcomeText"
-        android:layout_centerHorizontal="true"
         android:nestedScrollingEnabled="true"
-        android:onClick="onLoginButtonPressed" />
+        android:onClick="onLoginButtonPressed"
+        android:layout_marginBottom="49dp"
+        android:layout_above="@+id/signUpButton"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
+        android:textSize="40dp"
         android:id="@+id/signUpButton"
-        android:layout_below="@+id/loginButton"
-        android:layout_centerHorizontal="true"
-        android:onClick="onSignupButtonPressed" />
+        android:onClick="onSignupButtonPressed"
+        android:layout_marginBottom="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
