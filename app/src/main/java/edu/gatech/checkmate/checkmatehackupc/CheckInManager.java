@@ -21,13 +21,13 @@ public class CheckInManager extends BroadcastReceiver{
     @Override
     public void onReceive(Context context, Intent intent)
     {
-        Log.d("CheckInManager", "Got checkinmanager");
+        Log.d("CheckInManager", "Start onReceive");
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "");
         wl.acquire();
 
         if (TimeManager.hasCheckedIn == false) {
-            Log.d("CheckInManager", "Send email");
+            Log.d("CheckInManager", "Should send email");
 
             String[] TO = {"ks26700@gmail.com"};
             String[] CC = {"xyz@gmail.com"};
@@ -42,24 +42,27 @@ public class CheckInManager extends BroadcastReceiver{
             emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
 
             try {
-                Intent.createChooser(emailIntent, "Send mail...");
+                context.startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 
-                Log.d("CheckInManager", "Sent email");
+                Log.d("CheckInManager", "Sent email inside try");
             } catch (android.content.ActivityNotFoundException ex) {
                 Toast.makeText(context,
                         "There is no email client installed.", Toast.LENGTH_SHORT).show();
             }
-            Log.d("CheckInManager", "They didn't check in");
+            Log.d("CheckInManager", "End email block");
         }
 
+
         wl.release();
+        Log.d("CheckInManager", "End onReceive");
     }
     public void SetAlarm(Context context)
     {
         Log.d("CheckInManager", "Set alarm for check in");
-        AlarmManager am =( AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+        AlarmManager am1 =( AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(context, CheckInManager.class);
+
         PendingIntent pi = PendingIntent.getBroadcast(context, 1, i, 0);
-        am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), TimeManager.delay, pi);
+        am1.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), TimeManager.delay, pi);
     }
 }
