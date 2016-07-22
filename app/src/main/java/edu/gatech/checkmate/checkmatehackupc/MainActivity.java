@@ -40,8 +40,11 @@ public class MainActivity extends AppCompatActivity {
         checks.put(check.getUsername(), check);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
+
+        Log.d("MainActivity", "About to call CheckInManager");
         CheckInManager cm = new CheckInManager();
         cm.SetAlarm(this);
+        Log.d("MainActivity", "End onCreate MainActivity");
     }
 
     public void onLoginButtonPressed(View v) {
