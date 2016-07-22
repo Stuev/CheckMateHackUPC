@@ -13,6 +13,7 @@ import java.util.StringTokenizer;
 public class MainActivity extends AppCompatActivity {
 
     public static Check check = new Check(new Date(2016, 9, 16), 100, false, new HashMap<String, Mate>());
+    public static Check check2 = new Check("check2", "check2", "check2");
     public static Mate m = new Mate("mate", "mate", "mate");
     public static HashMap<String, Mate> mates = new HashMap<>();
     public static  HashMap<String, Check> checks = new HashMap<>();
@@ -30,14 +31,17 @@ public class MainActivity extends AppCompatActivity {
         Database d = new Database(this);
         try {
             d.addUser(check);
+            d.addUser(check2);
         } catch (Exception e) {
             Log.d("MainActivity", "OOPS");
         }
         check.addFriend(m);
         m.addFriend(check);
+        m.addFriend(check2);
         mates.put(m.getUsername(), m);
         mates.put(mate2.getUsername(), mate2);
         checks.put(check.getUsername(), check);
+        checks.put(check2.getUsername(), check2);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
 

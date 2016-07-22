@@ -15,7 +15,7 @@ public class Check extends User {
 
     public Check(String name, String username, String password) {
         super(name, username, password);
-        nextCheckIn = new Date(new Date().getTime() + 60000);
+        nextCheckIn = new Date(new Date().getTime() - 60000);
         delay = 2;
         isDisabled = false;
         friends = new HashMap<>();
