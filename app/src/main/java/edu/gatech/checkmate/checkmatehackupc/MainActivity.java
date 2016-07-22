@@ -3,6 +3,7 @@ package edu.gatech.checkmate.checkmatehackupc;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import java.util.Date;
@@ -26,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
         //Mate m
         //HashMap<String, Mate> h = new HashMap<>();
         //h.put("Mate test", m);
+        Database d = new Database(this);
+        try {
+            d.addUser(check);
+        } catch (Exception e) {
+            Log.d("MainActivity", "OOPS");
+        }
         check.addFriend(m);
         m.addFriend(check);
         mates.put(m.getUsername(), m);
