@@ -3,6 +3,7 @@ package edu.gatech.checkmate.checkmatehackupc;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import java.util.Date;
@@ -33,8 +34,11 @@ public class MainActivity extends AppCompatActivity {
         checks.put(check.getUsername(), check);
         TimeManager alarm = new TimeManager();
         alarm.SetAlarm(this);
+
+        Log.d("MainActivity", "About to call CheckInManager");
         CheckInManager cm = new CheckInManager();
         cm.SetAlarm(this);
+        Log.d("MainActivity", "End onCreate MainActivity");
     }
 
     public void onLoginButtonPressed(View v) {

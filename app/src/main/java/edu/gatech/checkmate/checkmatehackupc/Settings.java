@@ -16,24 +16,16 @@ import java.util.List;
 
 public class Settings extends AppCompatActivity {
 
-    ListView lv;
-    Database d;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        addFriendsToList();
-        System.out.println(Login.loggedIn);
-        lv = (ListView) findViewById(R.id.mateList);
-        d = new Database(this);
-    }
-
-    public void addFriendsToList() {
+        ListView lv = (ListView) findViewById(R.id.mateList);
 
         List<String> your_array_list = new ArrayList<String>();
 
-
+        Database d = new Database(this);
+        System.out.println(Login.loggedIn);
         for (User u : Login.loggedIn.getFriends().values()) {
             String isOK = "";
             try {
@@ -71,8 +63,8 @@ public class Settings extends AppCompatActivity {
         String friendNameString = (String) friendName.getText().toString();
         String userNameString = (String) username.getText().toString();
         Login.loggedIn.addFriend(MainActivity.getMate(userNameString));
-        addFriendsToList();
-        lv.invalidateViews();
+        finish();
+        startActivity(getIntent());
     }
 
     public void onHomeButtonPressed(View v) {
