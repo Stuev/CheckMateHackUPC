@@ -54,7 +54,7 @@ public class Settings extends AppCompatActivity {
         int x = Integer.parseInt(fd);
         Check temp = (Check) Login.loggedIn;
         temp.setDelay(x);
-        TimeManager.delay = x*1000*60;
+        TimeManager.delay1 = x*1000*60;
     }
 
     public void onAddFriendPressed(View v) {
