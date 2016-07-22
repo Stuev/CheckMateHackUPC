@@ -27,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
         //Mate m
         //HashMap<String, Mate> h = new HashMap<>();
         //h.put("Mate test", m);
+        Database d = new Database(this);
+        try {
+            d.addUser(check);
+        } catch (Exception e) {
+            Log.d("MainActivity", "OOPS");
+        }
         check.addFriend(m);
         m.addFriend(check);
         mates.put(m.getUsername(), m);
