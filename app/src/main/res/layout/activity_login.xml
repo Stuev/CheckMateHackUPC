@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/loginUsernameInput"
         android:layout_below="@+id/loginUsername"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/loginPasswordInput"
+        android:layout_alignEnd="@+id/loginPasswordInput" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,8 +35,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Password:"
         android:id="@+id/loginPassword"
-        android:layout_below="@+id/loginUsernameInput"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/loginPasswordInput"
+        android:layout_alignStart="@+id/loginUsername" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -51,8 +52,8 @@
         android:layout_height="wrap_content"
         android:text="LOGIN"
         android:id="@+id/login"
+        android:onClick="onLoginButtonPressed"
         android:layout_below="@+id/loginPasswordInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
-        android:onClick="onLoginButtonPressed" />
+        android:layout_alignStart="@+id/loginPassword"
+        android:layout_marginTop="74dp" />
 </RelativeLayout>

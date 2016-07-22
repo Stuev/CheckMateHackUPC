@@ -1,8 +1,6 @@
 package edu.gatech.checkmate.checkmatehackupc;
 
-import java.util.Date;
 import java.util.HashMap;
-import java.util.IllegalFormatCodePointException;
 import java.util.Map;
 
 /**
@@ -16,24 +14,21 @@ public class Mate extends User{
         friends = new HashMap<String, Check>();
     }
 
-    public void addFriend(Check friend) throws IllegalArgumentException {
-        if(friends.put(friend.getUsername(), friend) == null) {
-            throw new IllegalArgumentException("Friend already added.");
-        }
-
+    public Mate(String name, String username, String password) {
+        super(name, username, password);
+        friends = new HashMap<String, Check>();
     }
 
-    public void dropFriend(String username) {
-        if (friends.remove(username) == null) {
-            throw new IllegalArgumentException("Friend does not exist");
-        }
+
+    public void dropFriend(String username){
+        friends.remove(username);
     }
 
-    public boolean isFriendOk(String username) {
+/*    public boolean isFriendOk(String username) throws IllegalArgumentException {
         Check friend = friends.get(username);
         if (friend == null) {
             throw new IllegalArgumentException("Friend does not exist");
         }
-        return friend.getNextCheckIn().after(new Date());
-    }
+        return friend
+    }*/
 }

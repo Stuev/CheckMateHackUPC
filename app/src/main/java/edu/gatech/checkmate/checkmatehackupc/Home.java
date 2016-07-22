@@ -19,11 +19,14 @@ public class Home extends AppCompatActivity {
     }
 
     public void onOKButtonPressed(View v) {
-        MainActivity.user.setIsDisabled(false);
+        Check temp = (Check) Login.loggedIn;
+        temp.setIsDisabled(false);
         TimeManager.hasCheckedIn = true;
     }
 
     public void onNotOKButtonPressed(View v) {
-        MainActivity.user.setIsDisabled(true);
+        Check temp = (Check) Login.loggedIn;
+        temp.setIsDisabled(false);
+        temp.setIsDisabled(true);
     }
 }

@@ -13,6 +13,13 @@ public class Check extends User {
     private boolean isDisabled;
     private HashMap<String, Mate> friends;
 
+    public Check(String name, String username, String password) {
+        super(name, username, password);
+        nextCheckIn = new Date(new Date().getTime() + 60000);
+        delay = 2;
+        isDisabled = false;
+        friends = new HashMap<>();
+    }
     public Check(Date nextCheckIn, int delay, boolean isDisabled, HashMap<String, Mate> friends) {
         super();
         this.nextCheckIn = nextCheckIn;
@@ -29,9 +36,6 @@ public class Check extends User {
         this.nextCheckIn = nextCheckIn;
     }
 
-    public HashMap<String, Mate> getFriends() {
-        return friends;
-    }
 
     public void setFriends(HashMap<String, Mate> friends) {
         this.friends = friends;
@@ -51,5 +55,9 @@ public class Check extends User {
 
     public void setIsDisabled(boolean isDisabled) {
         this.isDisabled = isDisabled;
+    }
+
+    public void dropFriend(String username) {
+        friends.remove(username);
     }
 }
