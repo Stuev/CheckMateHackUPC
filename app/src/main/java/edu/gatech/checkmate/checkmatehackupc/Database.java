@@ -104,7 +104,7 @@ public class Database extends SQLiteOpenHelper{
         }
 
     }
-    
+
     public boolean isGood(Check check) throws Exception {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_USERNAME + " = '" + check.getUsername() + "';", null);
