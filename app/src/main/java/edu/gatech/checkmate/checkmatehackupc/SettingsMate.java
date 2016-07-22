@@ -22,7 +22,6 @@ public class SettingsMate extends AppCompatActivity {
         List<String> your_array_list = new ArrayList<String>();
 
         Database d = new Database(this);
-        System.out.println(Login.loggedIn);
         for (User u : Login.loggedIn.getFriends().values()) {
             String isOK = "";
             try {
