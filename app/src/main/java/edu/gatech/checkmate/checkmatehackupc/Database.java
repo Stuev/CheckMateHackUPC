@@ -92,7 +92,19 @@ public class Database extends SQLiteOpenHelper{
 
     }
 
+    public void updateDisabled(Check check, int num) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_USERNAME + " = '" + check.getUsername() + "';", null);
+        c.moveToFirst();
+        if(!c.isBeforeFirst()){
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_ISDISABLED, num);
+            db.update(TABLE_USERS, values, COLUMN_USERNAME + "= '" + check.getUsername() + "';", null);
+            db.close();
+        }
 
+    }
+    
     public boolean isGood(Check check) throws Exception {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE " + COLUMN_USERNAME + " = '" + check.getUsername() + "';", null);
